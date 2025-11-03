@@ -13,4 +13,5 @@ And I enter and select "DTH" in "UOM" on "createOpportunity" page
 And I enter and select "Dinesh Choudhary" in "salesperson" on "createOpportunity" page
 And I enter and select "New York" in "state" on "createOpportunity" page
 And I enter and select "Brijesh Tiwari" in "salesSupport" on "createOpportunity" page
-And I select "startDate" after "days" of current date
+And I select "startDateAfter15days" from current date on "createOpportunity" page
+

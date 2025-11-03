@@ -47,7 +47,7 @@ public class CretaeopportunitySteps {
 				JavascriptExecutor js = (JavascriptExecutor) driver;
 				
 				WebElement element	= driver.findElement(By.xpath(WebElementLocator));
-				   System.out.println("WebElementLocator" + WebElementLocator);
+				 
 				
 
 			  
