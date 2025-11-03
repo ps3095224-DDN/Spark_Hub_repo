@@ -5,7 +5,7 @@ import java.util.Calendar;
 
 public class utilityClass {
 	
-	public void getStartDate() {
+	public String getStartDate() {
         // Desired date format
         SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
 
@@ -15,11 +15,12 @@ public class utilityClass {
         // ---- START DATE: 15 days after current date ----
         cal.add(Calendar.DAY_OF_MONTH, 15);
         String startDate = sdf.format(cal.getTime());
+		return startDate;
   
     }
 
 
-public void getEndDate() {
+public String getEndDate() {
 	
     // Desired date format
     SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
@@ -33,6 +34,7 @@ public void getEndDate() {
     
     cal.add(Calendar.MONTH, 1);
     String endDate = sdf.format(cal.getTime());
+	return endDate;
     
 }
 }
