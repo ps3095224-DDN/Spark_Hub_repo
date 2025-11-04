@@ -13,7 +13,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.SparkHub.Spark_Hub_Automation.utilityClass;
+import com.SparkHub.Spark_Hub_Automation.Utility;
+import com.SparkHub.Spark_Hub_Automation.Utility;
 import com.SparkHub.stepdefinition.Hooks;
 import com.SparkHub.stepdefinition.PropertiesMapping;
 
@@ -187,7 +188,7 @@ public class GeneralSteps {
  			WebElement element = driver.findElement(By.xpath(WebElementLocator));
  			element.clear();
  					element.click();
- 			utilityClass util = new utilityClass();
+ 			Utility util = new Utility();
  		String startDate	= util.getStartDate();
  			element.sendKeys(startDate);
  			
@@ -199,7 +200,33 @@ public class GeneralSteps {
     	
      }
      
+     @And ("I select {string} from start date on {string} page")
      
+     public void endDateAfterMonth (String webElement , String screen) {
+    	 
+    	 String WebElementLocator = Property.getObjData(screen.replaceAll("\\s+","")+"_"+webElement.replaceAll("\\s+",""));
+     	
+     	Duration duration = Duration.ofSeconds(60);
+  		WebDriverWait wait = new WebDriverWait (driver, duration);
+  		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(WebElementLocator)));
+  		JavascriptExecutor js = (JavascriptExecutor) driver; 
+  		
+  		try {
+  			
+  			WebElement element = driver.findElement(By.xpath(WebElementLocator));
+  			element.clear();
+  			element.click();
+  			Utility util = new Utility ();
+  			String EndDate = util.getEndDate();
+  			element.sendKeys(EndDate);
+  			
+  		} catch (Exception e) {
+  			
+  			
+  		}
+  		
+     }
+
     
 
 }

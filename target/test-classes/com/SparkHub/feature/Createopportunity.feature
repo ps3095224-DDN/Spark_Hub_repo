@@ -14,4 +14,5 @@ And I enter and select "Dinesh Choudhary" in "salesperson" on "createOpportunity
 And I enter and select "New York" in "state" on "createOpportunity" page
 And I enter and select "Brijesh Tiwari" in "salesSupport" on "createOpportunity" page
 And I select "startDateAfter15days" from current date on "createOpportunity" page
+And I select "endDateAfterMonth" from start date on "createOpportunity" page
 
